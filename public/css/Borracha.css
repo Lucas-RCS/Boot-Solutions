@@ -45,6 +45,7 @@ a {
     background: #fff;
     height: 10vh;
     position: fixed;
+    z-index: 999;
   }
   
   
@@ -98,12 +99,15 @@ a {
    color: #FF4500;
  }
 
+
+ /* SERVIÇOS */
  .servicos{
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #EFEFEF;
+  z-index: -1;
 }
 .servicos .slide-container{
   max-width: 1120px;
