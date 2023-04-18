@@ -152,7 +152,7 @@ a {
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #FF4500;
+  background-color: white;
 }
 .servicos .overlay::after{
   border-radius: 0 25px 0 0;

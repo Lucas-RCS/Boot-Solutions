@@ -31,7 +31,7 @@ a:hover {
 }
 
 .bg-header-main {
-  background: url("../img/bg.png") no-repeat center center;
+  background: url("../img/boot/bg.png") no-repeat center center;
   height: 70vh;
 }
 
@@ -743,7 +743,7 @@ footer {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('../img/img-log.png');
+  background-image: url('../img/boot/img-log.png');
 }
 
 .log .login {
