@@ -485,7 +485,7 @@ footer{
   bottom: 0;
   left: 0;
   right: 0;
-  background: #303842;
+  background: #282e37;
   height: auto;
   width: 100%;
   padding-top: 40px;
@@ -498,7 +498,6 @@ footer{
 .footer-content h3{
   font-size: 1.7vh;
   font-weight: 400;
-  margin-left: 0.2%;
   line-height: 4rem;
 }
 
@@ -509,7 +508,7 @@ footer{
   text-transform: uppercase;
 }
 .footer-content hr{
-  border-color: #282e37;
+  border-color: #238f8d;
   height: 2em;
   margin-top: 10px;
   margin-left: 1%;
