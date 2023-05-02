@@ -494,18 +494,11 @@ footer{
 .footer-content{
   display: flex;
 }
-
-.footer-content h3{
-  font-size: 1.7vh;
-  font-weight: 400;
-  line-height: 4rem;
-}
-
-.footer-content h1{
-  margin-left: 1%;
-  font-size: 26px;
-  word-spacing: 2px;
-  text-transform: uppercase;
+.footer-content .logo_copy{
+  background: url("../img/boot/logo_white_min_copy.png");
+  width: 12%;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .footer-content hr{
   border-color: #238f8d;
@@ -523,23 +516,29 @@ footer{
 .socials{
   list-style: none;
   display: flex;
-  width: 70%;
+  width: 68%;
   align-items: center;
   justify-content: right;
-  margin: 1rem 0 2rem 0;
+  margin: 0rem 0 2rem 0;
 }
 
 .socials li{
-  margin: 0 12px;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  position: relative;
 }
 .socials a{
   color: #fff;
 }
 .socials a i{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: color .4s ease;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 .footer-bottom{
   background: #282e37;
   width: 100%;
@@ -557,14 +556,30 @@ footer{
   font-weight: 200;
 }
 
-.facebook:hover {
+.socials .facebook{
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.socials .facebook:hover {
   color: #4267b3;
   transition: 1s ease;
   transform: rotate(360deg);
   opacity: 0.8;
+  border: 2px solid #4267b3;
 }
 
-.instagram:hover {
+.socials .instagram{
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.socials .instagram:hover {
   background: -webkit-linear-gradient(right bottom, #7f37c9, #ff2992, #ff9807);
   -webkit-background-clip: text;
   background-clip: text;
@@ -572,14 +587,23 @@ footer{
   transition: 1s ease;
   transform: rotate(360deg);
   opacity: 0.8;
+  border-color: #ff2992;
+  /* border-image: linear-gradient(to bottom right, #7f37c9, #ff2992, #ff9807) 1; */
 }
 
-.whatsapp:hover {
+.socials .whatsapp{
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.socials .whatsapp:hover {
   color: #25d366;
   transition: 1s ease;
   transform: rotate(360deg);
   opacity: 0.8;
-
+  border: 2px solid #25d366;
 }
 
 /* RESPONSIVIBILIDADE */
