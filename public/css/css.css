@@ -52,7 +52,6 @@ nav {
   border-radius: 0px;
 }
 
-
 .nav-list img {
   padding-left: 30%;
 }
@@ -588,7 +587,6 @@ footer{
   transform: rotate(360deg);
   opacity: 0.8;
   border-color: #ff2992;
-  /* border-image: linear-gradient(to bottom right, #7f37c9, #ff2992, #ff9807) 1; */
 }
 
 .socials .whatsapp{
