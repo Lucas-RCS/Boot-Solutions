@@ -1,7 +1,7 @@
 // ANIMAÇÃO DO NAV-BAR FUNDO
 $(document).ready(function () {
     // Obter a posição da seção do slider
-    var sliderOffset = $('.servicos').offset().top;
+    var sliderOffset = $('.slider').offset().top;
 
     $(window).scroll(function () {
         // Obter a posição atual da barra de rolagem
@@ -96,7 +96,7 @@ var swiper = new Swiper(".slide-content", {
                                 return;
                             }
                             repeater();
-                        }, 10000);
+                        }, 4000);
                     }
                     repeater();
                 }
