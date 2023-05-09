@@ -494,11 +494,13 @@ footer{
   display: flex;
 }
 .footer-content .logo_copy{
-  background: url("../img/boot/logo_white_min_copy.png");
   width: 12%;
-  background-position: top;
-  background-repeat: no-repeat;
+  height: auto;
 }
+.footer-content .logo_copy img{
+  width: 100%;
+}
+
 .footer-content hr{
   border-color: #238f8d;
   height: 2em;
@@ -818,10 +820,19 @@ footer{
   .socials {
     margin: 1.2rem 1rem 0;
   }
+  .logo_copy{
+    background-color: red;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo_copy img{
+    width: 100%;
+  }
 }
 
 /* LOGIN */
-
 .log {
   margin: 0;
   padding: 0;
