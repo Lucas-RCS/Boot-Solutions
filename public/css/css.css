@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.7s;
   color: #238f8d;
 }
 
@@ -70,6 +70,7 @@ nav {
   letter-spacing: 3px;
   margin-left: 32px;
 }
+
 
 .fa-gradient {
   background: -webkit-linear-gradient(left bottom, #303842 50%, #238f8d 50%);
@@ -640,7 +641,7 @@ footer {
   }
 
   .nav-list {
-    position: fixed;
+    position: absolute;
     top: 11.5vh;
     right: 0vh;
     width: 50vw;
