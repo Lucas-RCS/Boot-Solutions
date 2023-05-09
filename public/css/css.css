@@ -325,14 +325,14 @@ main {
 /* MODAL */
 .modal {
   display: none;
-   position: fixed;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(48, 56, 66, 0.5); 
+  background-color: rgba(48, 56, 66, 0.5);
 }
 
 .modal-content {
@@ -340,7 +340,7 @@ main {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; 
+  width: 50%;
   border-radius: 5px;
 }
 
@@ -480,7 +480,7 @@ main {
 }
 
 /* FOOTER */
-footer{
+footer {
   bottom: 0;
   left: 0;
   right: 0;
@@ -490,49 +490,62 @@ footer{
   padding-top: 40px;
   color: #fff;
 }
-.footer-content{
+
+.footer-content {
   display: flex;
 }
-.footer-content .logo_copy{
+
+.footer-content .logo_copy {
   width: 12%;
-  height: auto;
-}
-.footer-content .logo_copy img{
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-.footer-content hr{
+.footer-content .logo_copy img {
+  max-width: 100%;
+}
+
+.footer-content hr {
   border-color: #238f8d;
   height: 2em;
-  margin-top: 10px;
+  margin-top: 0.7%;
   margin-left: 1%;
 }
-.footer-content p{
+
+.footer-content p {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   font-size: 16px;
   word-spacing: 2px;
   margin-left: 1%;
-  padding-top: 15px;
 }
 
-.socials{
-  list-style: none;
+.redes-sociais{
   display: flex;
   width: 68%;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: right;
-  margin: 0rem 0 2rem 0;
 }
 
-.socials li{
+.socials li {
   width: 50px;
   height: 50px;
   margin: 0 5px;
   position: relative;
 }
-.socials a{
+
+.socials a {
   color: #fff;
 }
-.socials a i{
+
+.socials a i {
   font-size: 1.4rem;
   transition: color .4s ease;
   display: flex;
@@ -540,30 +553,33 @@ footer{
   align-items: center;
 
 }
-.footer-bottom{
+
+.footer-bottom {
   background: #282e37;
   width: 100%;
   padding: 20px 0;
   text-align: center;
 }
-.footer-bottom p{
+
+.footer-bottom p {
   font-size: 14px;
-  word-spacing: 2px;
-  text-transform: capitalize;
+  word-spacing: 1px;
 }
-.footer-bottom span{
+
+.footer-bottom span {
   text-transform: uppercase;
   opacity: .4;
   font-weight: 200;
 }
 
-.socials .facebook{
+.socials .facebook {
   border: 2px solid white;
   border-radius: 100px;
   width: 50px;
   height: 50px;
   position: relative;
 }
+
 .socials .facebook:hover {
   color: #4267b3;
   transition: 1s ease;
@@ -572,7 +588,7 @@ footer{
   border: 2px solid #4267b3;
 }
 
-.socials .instagram{
+.socials .instagram {
   border: 2px solid white;
   border-radius: 100px;
   width: 50px;
@@ -591,13 +607,14 @@ footer{
   border-color: #ff2992;
 }
 
-.socials .whatsapp{
+.socials .whatsapp {
   border: 2px solid white;
   border-radius: 100px;
   width: 50px;
   height: 50px;
   position: relative;
 }
+
 .socials .whatsapp:hover {
   color: #25d366;
   transition: 1s ease;
@@ -795,40 +812,41 @@ footer{
   }
 }
 
-@media screen and (max-width: 768px){
-  .footer-content{
+@media screen and (max-width: 768px) {
+  .footer-content {
     display: inline;
   }
-  .footer-content hr{
+
+  .footer-content hr {
     display: none;
   }
-  .footer-content h1{
+
+  .footer-content h1 {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 35px;
   }
-  .footer-content h3{
+
+  .footer-content h3 {
     display: none;
   }
-  .footer-content p{
+
+  .footer-content p {
     padding-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .socials {
-    margin: 1.2rem 1rem 0;
-  }
-  .logo_copy{
-    background-color: red;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .logo_copy img{
+  .footer-content .logo_copy{
     width: 100%;
+  }
+  .redes-sociais{
+    width: 100%;
+  }
+  .socials {
+    justify-content: center;
+    margin-top: 3%;
   }
 }
 
