@@ -104,7 +104,7 @@ nav {
 }
 
 /* SLIDER */
-/* .slides {
+.slides {
   width: 500%;
   height: 500px;
   display: flex;
@@ -199,7 +199,7 @@ nav {
 
 #radio4:checked~.navigation-auto .auto-btn4 {
   background: #FF4500;
-} */
+}
 
 /* SERVIÇOS */
 .servicos {
