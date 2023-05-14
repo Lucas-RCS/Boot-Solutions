@@ -31,7 +31,7 @@
                             <li><a href="#servicos">SERVIÇOS <i class="fa fa-briefcase fa-1x"></i></a></li>
                             <li><a href="#agend">AGENDAR <i class="fa fa fa-pencil fa-1x"></i></a></li>
                             <li><a href="#contact">CONTATO <i class="fa fa-phone fa-1x"></i></a></li>
-                            
+
                         </ul>
                     </nav>
                 </header>
@@ -130,12 +130,32 @@
                     </div>
                     <div class="agend-formu">
                         <div class="agend-form">
-                            <h1>Contate-Nos</h1>
+                            <h1>Agendamento</h1>
                             <form action="">
-                                <input type="text" placeholder="Nome Completo" class="agend-form-text">
-                                <input type="text" placeholder="Email" class="agend-form-text">
-                                <textarea placeholder="Digite sua mensagem aqui..."
-                                    class="agend-form-textarea"></textarea>
+                                <input type="text" placeholder="Nome Completo" class="agend-form-text agend-name"
+                                    maxlength="100" required>
+                                <input type="tel" placeholder="Tel: (00) 000000000"
+                                    pattern="\([0-9]{2}\) [0-9]{4,5}[0-9]{4}" maxlength="14"
+                                    class="agend-form-text agend-tel" required inputmode="tel">
+                                <div class="container">
+                                    <div class="datetime">
+                                        <p>Selecione uma data e hora:</p>
+                                        <input type="datetime-local" id="data-hora" name="data-hora"
+                                            class="agend-datetime" required>
+                                    </div>
+                                    <div class="opcoesservicos">
+                                        <p>Selecione um serviço:</p>
+                                        <select id="opcoes" name="opcoes" required>
+                                            <option value="">Nenhum</option>
+                                            <option value="opcao1">Borracharia</option>
+                                            <option value="opcao2">Alinhamento</option>
+                                            <option value="opcao3">Lava-Rápido</option>
+                                            <option value="opcao4">Mecânico</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <textarea placeholder="Digite sua observação aqui..." class="agend-form-textarea"
+                                    maxlength="300"></textarea>
                                 <input type="submit" placeholder="Enviar" class="agend-form-btn ">
                             </form>
                         </div>
