@@ -1,7 +1,7 @@
 // ANIMAÇÃO DO NAV-BAR FUNDO
 $(document).ready(function () {
     // Obter a posição da seção do slider
-    var sliderOffset = $('.servicos').offset().top;
+    var sliderOffset = $('.top-backg').offset().top;
 
     $(window).scroll(function () {
         // Obter a posição atual da barra de rolagem
@@ -10,8 +10,10 @@ $(document).ready(function () {
         // Comparar a posição atual da barra de rolagem com a posição da seção do slider
         if (scrollTop > sliderOffset) {
             $('nav').addClass('black-bg');
+            $('nav-list').addClass('black-bg');
         } else {
             $('nav').removeClass('black-bg');
+            $('nav-list').removeClass('black-bg');
         }
     });
 });
@@ -48,38 +50,45 @@ var swiper = new Swiper(".slide-content", {
   })});
 
 
-
-  var slides = document.querySelectorAll('.slide');
-                var btns = document.querySelectorAll('.btn');
-                let currentSlide = 1;
-
-                // Javascript for image slider manual navigation
-                var manualNav = function (manual) {
-                    slides.forEach((slide) => {
-                        slide.classList.remove('active');
-
-                        btns.forEach((btn) => {
-                            btn.classList.remove('active');
-                        });
-                    });
-
-                    slides[manual].classList.add('active');
-                    btns[manual].classList.add('active');
-                }
-
-                btns.forEach((btn, i) => {
-                    btn.addEventListener("click", () => {
-                        manualNav(i);
-                        currentSlide = i;
-                    });
-                });
-
-                // Javascript for image slider autoplay navigation
-                var counter = 1;
-                setInterval(function(){
-                  document.getElementById('radio' + counter).checked = true;
-                  counter++;
-                  if(counter > 4){
-                    counter = 1;
-                  }
-                }, 5000);
+// Função para animação de scroll suave
+function smoothScroll(target, duration) {
+    var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+  
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      var timeElapsed = currentTime - startTime;
+      var run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+  
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+  
+    requestAnimationFrame(animation);
+  }
+  
+  // Selecionar todos os links de navegação
+  var links = document.querySelectorAll('nav a');
+  
+  // Adicionar evento de clique para cada link
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var href = this.getAttribute('href');
+      if (href.startsWith('#')) {
+        smoothScroll(href, 1000);
+      } else {
+        window.location.href = href;
+      }
+    });
+  });
+  
