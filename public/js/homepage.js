@@ -11,9 +11,6 @@ allSideMenu.forEach(item=> {
 	})
 });
 
-
-
-
 // TOGGLE SIDEBAR
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
 const sidebar = document.getElementById('sidebar');
@@ -21,12 +18,6 @@ const sidebar = document.getElementById('sidebar');
 menuBar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
 })
-
-
-
-
-
-
 
 const searchButton = document.querySelector('#content nav form .form-input button');
 const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
@@ -44,10 +35,6 @@ searchButton.addEventListener('click', function (e) {
 	}
 })
 
-
-
-
-
 if(window.innerWidth < 768) {
 	sidebar.classList.add('hide');
 } else if(window.innerWidth > 576) {
@@ -63,8 +50,6 @@ window.addEventListener('resize', function () {
 	}
 })
 
-
-
 const switchMode = document.getElementById('switch-mode');
 
 switchMode.addEventListener('change', function () {
@@ -73,4 +58,50 @@ switchMode.addEventListener('change', function () {
 	} else {
 		document.body.classList.remove('dark');
 	}
-})
+});
+
+
+
+// // Seleciona todos os links da barra lateral
+// const links = document.querySelectorAll('#sidebar');
+
+// // Itera sobre todos os links e adiciona um ouvinte de evento de clique a cada um
+// links.forEach(link => {
+//   link.addEventListener('click', function(e) {
+//     // Impede o comportamento padrão do navegador de recarregar a página
+//     e.preventDefault();
+    
+//     // Seleciona o identificador do link clicado
+//     const id = this.getAttribute('href');
+    
+//     // Seleciona o elemento HTML correspondente ao identificador
+//     const conteudo = document.querySelector(id);
+    
+//     // Esconde todos os elementos de conteúdo
+//     document.querySelectorAll('.conteudo').forEach(elemento => {
+//       elemento.style.display = 'none';
+//     });
+    
+//     // Exibe o conteúdo correspondente ao link clicado
+//     conteudo.style.display = 'block';
+//   });
+// });
+// // Seleciona o elemento "Home" da barra lateral
+// const homeLink = document.querySelector('nav a[href="#home"]');
+// // Clica no elemento "Home" para exibir o conteúdo correspondente
+// homeLink.click();
+
+
+
+
+// MUDA DE COR AS COISAS
+// const colorPicker = document.getElementById('color-picker');
+// const elementToColor = document.getElementById('element-to-color');
+
+// colorPicker.addEventListener('input', function() {
+//   elementToColor.style.backgroundColor = colorPicker.value;
+// 	elementToColor.style.color = colorPicker.value;
+
+// });
+
+
