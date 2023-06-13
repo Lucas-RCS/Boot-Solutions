@@ -641,45 +641,46 @@ footer {
 
 /* RESPONSIVIBILIDADE */
 @media (max-width: 999px) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    nav {
-        width: 90%;
-        margin-left: 5%;
-        position: fixed;
-    }
+  nav {
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+  }
 
-    nav img {
-        width: 35%;
-        margin-left: 5%;
-    }
+  nav img {
+    width: 35%;
+    margin-left: 5%;
+  }
 
-    .nav-list {
-        position: fixed;
-        top: 11.5vh;
-        right: 0vh;
-        width: 50vw;
-        height: 32vh;
-        background: white;
-        color: #303842;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-out;
-    }
+  .nav-list {
+    position: fixed;
+    top: 11.5vh;
+    right: 0vh;
+    width: 50vw;
+    height: 32vh;
+    background-color: rgba(255, 255, 255, 0.970);
+    color: #303842;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
 
-    .mobile-menu {
-        display: block;
-        margin-right: 5%;
-    }
+  .mobile-menu {
+    display: block;
+    margin-right: 5%;
+  }
+
 }
 
 .nav-list.active {
