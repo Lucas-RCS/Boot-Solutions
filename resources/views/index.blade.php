@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boot Software</title>
     <link rel="stylesheet" type="text/css" href="../css/css.css" />
-    <link rel="shortcut icon" href="../img/boot/icon_min_green.png" type="image/gif">
+    <link rel="shortcut icon" href="{{ asset('./img/boot/icon_min_green.png'); }} type="image/gif">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,0" />
@@ -18,7 +18,7 @@
         <section class="hearder" id="home">
             <header>
                 <nav>
-                    <a href="#"><img src="../img/boot/logo_black_min.png" alt="BOOT SOLUÇÕES" aria-label="BOOT"></a>
+                    <a href="#"><img src="{{ asset('./img/boot/logo_black_min.png') }}" alt="BOOT SOLUÇÕES" aria-label="BOOT"></a>
                     <div class="mobile-menu">
                         <div class="line1"></div>
                         <div class="line2"></div>
@@ -47,7 +47,7 @@
                 <div class="container-card">
                     <div class="card">
                         <div class="card-info">
-                            <div class="card-avatar"><img src="../img/autocenter/exmplo-logo4.jpg" alt=""></div>
+                            <div class="card-avatar"><img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }}" alt="" circle_around></div>
                             <div class="card-title">Guimarães</div>
                             <div class="card-subtitle">Auto Center &amp; Borracharia</div>
                         </div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="image-section">
-                    <img src="../img/boot/img-about.jpg">
+                    <img src="{{ asset('./img/boot/img-about.jpg') }}">
                 </div>
             </div>
         </section>
@@ -130,14 +130,13 @@
                         </div>
                     </div>
                 </section>
-
             </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer-content">
-            <div class="logo_copy"><img src="../img/boot/logo_white_min_copy.png" alt=""></div>
+            <div class="logo_copy"><img src="{{ asset('./img/boot/logo_white_min_copy.png') }}" alt=""></div>
             <hr noshade>
             <p>Soluções de Informática</p>
             <div class="redes-sociais">
@@ -156,9 +155,9 @@
         </div>
     </footer>
 
-    <script src="../js/mobile-navbar.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/modal.js"></script>
+    <script src="{{ asset('./js/mobile-navbar.js') }}"></script>
+    <script src="{{ asset('./js/app.js') }}"></script>
+    <script src="{{ asset('./js/modal.js') }}"></script>
 
 </body>
 

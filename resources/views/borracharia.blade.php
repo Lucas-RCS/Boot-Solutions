@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="{{ asset('./js/swiper-bundle.min.js') }}"></script>
 
 </head>
 
@@ -21,7 +21,7 @@
                 <header>
                     <nav>
                         <div class="nav-logo">
-                            <a href="#"><img src="../img/autocenter/exmplo-logo4-white-menor.png" alt="Guimarães"
+                            <a href="#"><img src="{{ asset('./img/autocenter/exmplo-logo4-white-menor.png') }} " alt="Guimarães"
                                     aria-label="Logotipo Guimarães">Guimarães</a>
                         </div>
                         <div class="mobile-menu">
@@ -46,10 +46,10 @@
                         <div class="card-wrapper swiper-wrapper">
                             <div class="card swiper-slide">
                                 <div class="image-box">
-                                    <img src="../img/autocenter/pneu.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/pneu.jpg') }}" alt="" />
                                 </div>
                                 <div class="profile-details">
-                                    <img src="../img/autocenter/exmplo-logo4.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }}" alt="" />
                                     <div class="name-job">
                                         <h3 class="name">Pneus Novos e Remold</h3>
                                         <h4 class="job">Troca de pneus com agilidade e segurança, garantindo a
@@ -59,10 +59,10 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="image-box">
-                                    <img src="../img/autocenter/car-aling.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/car-aling.jpg') }}" alt="" />
                                 </div>
                                 <div class="profile-details">
-                                    <img src="../img/autocenter/exmplo-logo4.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }}" alt="" />
                                     <div class="name-job">
                                         <h3 class="name">Alinhamento</h3>
                                         <h4 class="job">Fazemos o ajuste do alinhamento e balanceamento de veículos
@@ -72,10 +72,10 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="image-box">
-                                    <img src="../img/autocenter/car-wash.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/car-wash.jpg') }}" alt="" />
                                 </div>
                                 <div class="profile-details">
-                                    <img src="../img/autocenter/exmplo-logo4.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }}" alt="" />
                                     <div class="name-job">
                                         <h3 class="name">Lava Rápido</h3>
                                         <h4 class="job">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, vel</h4>
@@ -84,10 +84,10 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="image-box">
-                                    <img src="../img/autocenter/mecanico.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/mecanico.jpg') }}" alt="" />
                                 </div>
                                 <div class="profile-details">
-                                    <img src="../img/autocenter/exmplo-logo4.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }} " alt="" />
                                     <div class="name-job">
                                         <h3 class="name">Mecânica</h3>
                                         <h4 class="job">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, velr</h4>
@@ -96,10 +96,10 @@
                             </div>
                             <div class="card swiper-slide">
                                 <div class="image-box">
-                                    <img src="../img/autocenter/Carro-G.jpeg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/Carro-G.jpeg') }}" alt="" />
                                 </div>
                                 <div class="profile-details">
-                                    <img src="../img/autocenter/exmplo-logo4.jpg" alt="" />
+                                    <img src="{{ asset('./img/autocenter/exmplo-logo4.jpg') }}" alt="" />
                                     <div class="name-job">
                                         <h3 class="name">AAAAAAA</h3>
                                         <h4 class="job">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, vel</h4>
@@ -137,7 +137,7 @@
     </main>
     <footer>
         <div class="footer-content">
-            <div class="logo_copy"><img src="../img/autocenter/exmplo-logo4-white.png" alt=""><p>Guimarães</p></div>
+            <div class="logo_copy"><img src="{{ asset('./img/autocenter/exmplo-logo4-white.png') }}" alt="" ><p>Guimarães</p></div>
             <hr noshade>
             <p>Auto Center & Borracharia</p>
             <div class="redes-sociais">
@@ -153,10 +153,8 @@
         </div>
     </footer>
 </body>
-<script src="../js/borracha.js"></script>
-<script src="../js/mobile-navbar.js"></script>
-
-
+<script src="{{ asset('./js/borracha.js') }}"></script>
+<script src="{{ asset('./js/mobile-navbar.js') }}"></script>
 
 
 </html>

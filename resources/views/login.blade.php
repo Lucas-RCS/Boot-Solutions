@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}" />
     <link rel="shortcut icon" href="../img/boot/icon_min_green.png" type="image/gif">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet"
@@ -14,16 +14,16 @@
 
 <body>
     <video autoplay loop muted>
-        <source src="../img/Videos/Login_Boot.mp4" type="video/mp4">
+        <source src="{{asset('img/Videos/Login_Boot.mp4')}}" type="video/mp4">
     </video>
     <section class="log">
         <a class="back-button" href="./index.html"><i class="fa fa-arrow-circle-left fa-2x"></i></a>
         <form class="login">
-            <img src="../img/boot/logo_green.png" alt="LOGO">
+            <img src="{{asset('img/boot/logo_green.png')}}" alt="LOGO">
             <h2>Login</h2>
             <input type="email" placeholder="E-mail">
             <input type="password" placeholder="Senha">
-            <button type="submit" id="myButton" href="../views/borracharia.html">Entrar</button>
+            <button type="submit" id="myButton" href="{{route('borracharia.index')}}">Entrar</button>
             <div id="loader"></div>
 
             <script>
