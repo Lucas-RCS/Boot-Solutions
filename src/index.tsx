@@ -1,19 +1,49 @@
+/**
+ * @const Index
+ * @autor PLusIntelligence
+ * @description Page index.tsx
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import Routes from './routes';
+import { ConfigProvider } from 'antd';
+import Cookie from 'universal-cookie';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const cookie = new Cookie();
+
+const readToken = () => {
+  return cookie.get("colorSistem");
+};
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+
+const style = { "--colorbg": readToken() } as React.CSSProperties;
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ConfigProvider
+    theme={{
+      components: {
+        Button: {
+          colorPrimary: readToken(),
+          colorPrimaryHover: readToken() + "C1",
+          colorPrimaryActive: readToken() + "7D",
+        },
+        Checkbox: {
+          colorPrimary: readToken(),
+          colorPrimaryHover: readToken() + "C1",
+        }
+      },
+    }}
+  >
+    <div style={style}>
+      <React.StrictMode>
+        <Routes />
+      </React.StrictMode>
+    </div>
+  </ConfigProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
