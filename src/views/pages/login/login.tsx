@@ -3,7 +3,6 @@ import style from './login.module.scss';
 import { Div } from '../../assets/elements/common';
 import { GoogleLogo, FacebookLogo, TwitterLogo } from '@phosphor-icons/react';
 import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
-import { NavLink } from 'react-router-dom';
 
 const Title = Typography.Title;
 /**
@@ -34,8 +33,8 @@ function Login() {
       <div className={style.AppStyle}>
         <div className={style.Container} onContextMenu={handleContextMenu}>
           <Div $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
-            {/* <img src="./img/logo_green.png" alt="Logo BootSolutions" draggable={false} /> */}
-            <Title level={2} style={{ color: "black" }}>Login</Title>
+            <img src="./img/logo_black.png" alt="Logo BootSolutions" draggable={false} />
+            {/* <Title level={2} style={{ color: "black" }}>Login</Title> */}
             <Form
               name="basic"
               labelCol={{ span: 0 }}
@@ -71,11 +70,9 @@ function Login() {
               </Form.Item>
 
               <Form.Item >
-                <NavLink to="/home">
                   <Button type="primary" htmlType="submit" block onClick={login}>
                     Login
                   </Button>
-                </NavLink>
                 <Divider style={{ borderColor: "black" }}>ou login com</Divider>
                 <div className={style.socialLogin}>
                   <FacebookLogo size={32} color="#3b5998" weight="duotone" onClick={login} className={style.socialLogo} />

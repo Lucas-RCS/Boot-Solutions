@@ -24,6 +24,8 @@ root.render(
   <div style={style}>
     <ConfigProvider
       theme={{
+        token: {
+        },
         components: {
           Button: {
             colorPrimary: "rgb(var(--colorbg))",
@@ -36,7 +38,7 @@ root.render(
           },
           Input: {
             colorBorder: "rgb(var(--colorbg))",
-          }
+          },
         },
       }}
     >
