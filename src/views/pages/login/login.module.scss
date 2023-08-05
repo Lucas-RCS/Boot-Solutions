@@ -32,62 +32,34 @@
       img {
         margin-top: 20px;
         margin-bottom: 10px;
+        width: auto;
+        height: 100%;
+      }
+
+      .socialLogin {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+      }
+      .socialLogo {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .socialLogo:hover {
+        transform: scale(1.2);
       }
     }
   }
-
+  
   footer {
     padding: 12px;
   }
-}
-
-.socialLogin {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.socialLogo {
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.socialLogo:hover {
-  transform: scale(1.1);
-}
-
-.customFormItem .ant-form-item-required::before {
-  content: "" !important;
-}
-
-input,
-textarea,
-button {
-  all: unset;
-  box-sizing: border-box;
-}
-
-.FormRoot {
-  width: 260px;
-}
-
-.FormField {
-  display: grid;
-  margin-bottom: 10px;
-}
-
-.FormLabel {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 35px;
+}::selection{
+  background-color: rgba(var(--colorbg),0.5);
   color: white;
 }
 
-.FormMessage {
-  font-size: 13px;
-  color: white;
-  opacity: 0.8;
-}
+
 
 .Input,
 .Textarea {
@@ -95,28 +67,24 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-
+  border-radius:8px;
   font-size: 15px;
-  color: white;
-  background-color: var(--black);
-  box-shadow: 0 0 0 1px var(--black);
+  border-width: 2px;
+  color: rgb(var(--colorbg));
+  border-color: rgba(var(--colorbg), 0.5);
 }
+
 
 .Input:hover,
 .Textarea:hover {
-  box-shadow: 0 0 0 1px black;
+  box-shadow: 0 0 0 2px rgb(var(--colorbg), .5);
+  border-color: rgba(var(--colorbg), 1) !important;
 }
 
 .Input:focus,
 .Textarea:focus {
-  box-shadow: 0 0 0 2px black;
-}
-
-.Input::selection,
-.Textarea::selection {
-  background-color: var(--black);
-  color: white;
+  color: rgb(var(--colorbg));
+  border-color: rgba(var(--colorbg), 1) !important;
 }
 
 .Input {
@@ -124,7 +92,6 @@ button {
   height: 35px;
   line-height: 1;
 }
-
 .Textarea {
   resize: none;
   padding: 10px;

@@ -17,11 +17,7 @@ const readToken = () => {
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 const style = {
-  "--colorbg": readToken(),
-  "::selection": {
-    backgroundColor: "rgb(var(--colorbg))",
-    color: "white"
-  }
+  "--colorbg": readToken()
 } as React.CSSProperties;
 
 root.render(
@@ -37,6 +33,9 @@ root.render(
           Checkbox: {
             colorPrimary: "rgb(var(--colorbg))",
             colorPrimaryHover: "rgba(var(--colorbg),0.5)",
+          },
+          Input: {
+            colorBorder: "rgb(var(--colorbg))",
           }
         },
       }}
