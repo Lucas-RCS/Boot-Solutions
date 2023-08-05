@@ -1,11 +1,10 @@
 import React from 'react';
 import style from './login.module.scss';
 import { Div } from '../../assets/elements/common';
-import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
 import { GoogleLogo, FacebookLogo, TwitterLogo } from '@phosphor-icons/react';
+import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
 
 const { Title } = Typography;
-
 /**
  * @function Login 
  * @description Page Login.tsx
@@ -23,24 +22,33 @@ const login = () => {
   message.success('Login efetuado com sucesso!');
 }
 
+
+const handleContextMenu = (e: React.MouseEvent<HTMLDivElement>) => {
+  e.preventDefault();
+};
+
 function Login() {
   return (
-    <div className={style.AppStyle}>
-      <div className={style.Container}>
-        <Div $primary $colorBG='transparent' $width='100%' $height='100%'>
-          <Div $primary $colorBG='white' $width='30%' $height='50%' $radius='12px'>
 
-            <Form
+    <div className={style.Bg}>
+      <div className={style.AppStyle}>
+        <div className={style.Container} onContextMenu={handleContextMenu}>
+          <Div $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
+            <img src="./img/logo_green.png" alt="Logo BootSolutions" draggable={false} />
+          <Form
               name="basic"
-              labelCol={{ span: 8 }}
-              wrapperCol={{ span: 16 }}
-              style={{ maxWidth: 600 }}
+              labelCol={{ span: 0 }}
+              wrapperCol={{ span: 0 }}
+              style={{
+                maxWidth: 1200,
+                width: '80%',
+              }}
               initialValues={{ remember: true }}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
               autoComplete="off"
             >
-              <Title level={2} style={{ textAlign: 'center' }}>Login</Title>
+              
               <Form.Item
                 label="Login"
                 name="Login"
@@ -57,12 +65,12 @@ function Login() {
                 <Input.Password />
               </Form.Item>
 
-              <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+              <Form.Item name="remember" valuePropName="checked" >
                 <Checkbox>Lembre-me</Checkbox>
               </Form.Item>
 
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary" htmlType="submit" block>
+              <Form.Item >
+                <Button type="primary" htmlType="submit" block onClick={login}>
                   Login
                 </Button>
                 <Divider style={{ borderColor: "black" }}>ou login com</Divider>
@@ -74,10 +82,11 @@ function Login() {
               </Form.Item>
             </Form>
           </Div>
-        </Div>
-      </div>
+        </div>
+      </div >
       <footer><span>powered by @BootSolutions</span></footer>
-    </div >
+    </div>
+
   );
 }
 

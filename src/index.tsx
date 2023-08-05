@@ -1,9 +1,6 @@
-/**
- * @const Index
- * @autor PLusIntelligence
- * @description Page index.tsx
+/***
+ * @file index.tsx
  */
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
@@ -19,31 +16,36 @@ const readToken = () => {
 };
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-
-const style = { "--colorbg": readToken() } as React.CSSProperties;
+const style = {
+  "--colorbg": readToken(),
+  "::selection": {
+    backgroundColor: "rgb(var(--colorbg))",
+    color: "white"
+  }
+} as React.CSSProperties;
 
 root.render(
-  <ConfigProvider
-    theme={{
-      components: {
-        Button: {
-          colorPrimary: readToken(),
-          colorPrimaryHover: readToken() + "C1",
-          colorPrimaryActive: readToken() + "7D",
+  <div style={style}>
+    <ConfigProvider
+      theme={{
+        components: {
+          Button: {
+            colorPrimary: "rgb(var(--colorbg))",
+            colorPrimaryHover: "rgba(var(--colorbg),0.5)",
+            colorPrimaryActive: "rgba(var(--colorbg),0.2)",
+          },
+          Checkbox: {
+            colorPrimary: "rgb(var(--colorbg))",
+            colorPrimaryHover: "rgba(var(--colorbg),0.5)",
+          }
         },
-        Checkbox: {
-          colorPrimary: readToken(),
-          colorPrimaryHover: readToken() + "C1",
-        }
-      },
-    }}
-  >
-    <div style={style}>
+      }}
+    >
       <React.StrictMode>
         <Routes />
       </React.StrictMode>
-    </div>
-  </ConfigProvider>
+    </ConfigProvider>
+  </div>
 );
 
 reportWebVitals();
