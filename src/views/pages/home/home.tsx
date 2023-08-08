@@ -1,12 +1,10 @@
 import react from 'react';
-import style from './home.module.scss';
+import SideBar from '../../assets/components/sideBar/sideBar';
 
 class Home extends react.Component {
     render() {
         return (
-            <div className={style.Home}>
-                <h1>Home</h1>
-            </div>
+            <SideBar />
         )
     }
 }

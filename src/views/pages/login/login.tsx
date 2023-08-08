@@ -34,7 +34,7 @@ function Login() {
         <div className={style.Container} onContextMenu={handleContextMenu}>
           <Div $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
             <img src="./img/logo_black.png" alt="Logo BootSolutions" draggable={false} />
-            {/* <Title level={2} style={{ color: "black" }}>Login</Title> */}
+            <Title level={2} style={{ color: "black" }}>Login</Title>
             <Form
               name="basic"
               labelCol={{ span: 0 }}

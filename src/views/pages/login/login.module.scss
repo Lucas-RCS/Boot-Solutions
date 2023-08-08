@@ -6,7 +6,7 @@
   height: 100dvh;
   // background-image: url("../../../../public/img/Login_Boot.gif");
   // background-color: rgba(var(--colorbg), 0.5);
-  background: linear-gradient(45deg, rgba(var(--colorbg), 0.8), rgba(var(--colorbg), 0.2));
+  background: linear-gradient(45deg, rgba(var(--colorbg), 0.8), rgba(var(--colorbg), 0.1));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,7 +15,7 @@
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  padding: 150px 500px;
+  padding: 100px 400px;
 
   .AppStyle {
     width: 100%;
@@ -116,7 +116,7 @@
 
 @media (max-width: 1268px) {
   .Bg {
-    padding: 100px 60px;
+    padding: 40px 40px;
   }
 
   .AppStyle {

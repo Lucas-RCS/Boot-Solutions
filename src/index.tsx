@@ -7,17 +7,16 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Routes from './routes';
 import { ConfigProvider } from 'antd';
-import Cookie from 'universal-cookie';
 
-const cookie = new Cookie();
+const LS = require('local-storage');
 
-const readToken = () => {
-  return cookie.get("colorSistem");
+const ColorSystem = () => {
+  return LS.get("colorSistem");
 };
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 const style = {
-  "--colorbg": readToken()
+  "--colorbg": ColorSystem()
 } as React.CSSProperties;
 
 root.render(
