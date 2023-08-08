@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import style from './sideBar.module.scss';
+import './sideBar.scss';
 import { BookmarksSimple, ChartBar, ChatCircleDots, Folders, GearSix, List, MagnifyingGlass, ShoppingCart, SquaresFour, Users } from '@phosphor-icons/react';
 
 
@@ -44,80 +44,80 @@ const Sidebar: React.FC = () => {
     }, []);
 
     return (
-        <div className={style.sidebar}>
-            <div className={style.logo_details}>
-                <i className="bx"><List size={32} weight="duotone" /></i>
-                <div className={style.logo_name}>BootSolutions</div>
+        <div className="sidebar">
+            <div className="logo_details">
+                <i className="bx icons"><List size={32} weight="duotone" /></i>
+                <div className="logo_name">BootSolutions</div>
                 <i className="bx bx-menu" id="btn"></i>
             </div>
-            <ul className={style.nav_list}>
+            <ul className="nav_list">
                 <li>
-                    <i className="bx bx-search"><MagnifyingGlass size={32} weight="duotone" /></i>
+                    <i className="bx bx-search icons"><MagnifyingGlass size={32} weight="duotone" /></i>
                     <input type="text" placeholder="Procurar..." />
-                    <span className={style.tooltip}>Procurar</span>
+                    <span className="tooltip">Procurar</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><SquaresFour size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Dashboard</span>
+                        <i className="bx icons"><SquaresFour size={32} weight="duotone" /></i>
+                        <span className="links_name">Dashboard</span>
                     </a>
-                    <span className={style.tooltip}>Dashboard</span>
+                    <span className="tooltip">Dashboard</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><Users size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Usuário</span>
+                        <i className="bx icons"><Users size={32} weight="duotone" /></i>
+                        <span className="links_name">Usuário</span>
                     </a>
-                    <span className={style.tooltip}>Usuário</span>
+                    <span className="tooltip">Usuário</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><ChatCircleDots size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Notificações</span>
+                        <i className="bx icons"><ChatCircleDots size={32} weight="duotone" /></i>
+                        <span className="links_name">Notificações</span>
                     </a>
-                    <span className={style.tooltip}>Notificações</span>
+                    <span className="tooltip">Notificações</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><ChartBar size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Gráficos</span>
+                        <i className="bx icons"><ChartBar size={32} weight="duotone" /></i>
+                        <span className="links_name">Gráficos</span>
                     </a>
-                    <span className={style.tooltip}>Gráficos</span>
+                    <span className="tooltip">Gráficos</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><Folders size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Arquivos</span>
+                        <i className="bx icons"><Folders size={32} weight="duotone" /></i>
+                        <span className="links_name">Arquivos</span>
                     </a>
-                    <span className={style.tooltip}>Arquivos</span>
+                    <span className="tooltip">Arquivos</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><ShoppingCart size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Carrinho</span>
+                        <i className="bx icons"><ShoppingCart size={32} weight="duotone" /></i>
+                        <span className="links_name">Carrinho</span>
                     </a>
-                    <span className={style.tooltip}>Carrinho</span>
+                    <span className="tooltip">Carrinho</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><BookmarksSimple size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Favoritos</span>
+                        <i className="bx icons"><BookmarksSimple size={32} weight="duotone" /></i>
+                        <span className="links_name">Favoritos</span>
                     </a>
-                    <span className={style.tooltip}>Favoritos</span>
+                    <span className="tooltip">Favoritos</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="bx"><GearSix size={32} weight="duotone" /></i>
-                        <span className={style.links_name}>Configurações</span>
+                        <i className="bx icons"><GearSix size={32} weight="duotone" /></i>
+                        <span className="links_name">Configurações</span>
                     </a>
-                    <span className={style.tooltip}>Configurações</span>
+                    <span className="tooltip">Configurações</span>
                 </li>
-                <li className={style.profile}>
-                    <div className={style.profile_details}>
+                <li className="profile">
+                    <div className="profile_details">
                         <img src="./img/logo_gree.png" alt="profileImg" />
-                        <div className={style.name_job}>
-                            <div className={style.name}>Prem Shahi</div>
-                            <div className={style.job}>Web designer</div>
+                        <div className="name_job">
+                            <div className="name">Prem Shahi</div>
+                            <div className="job">Web designer</div>
                         </div>
                     </div>
                     <i className="" id="log_out"></i>
@@ -131,8 +131,8 @@ const SideBar: React.FC = () => {
     return (
         <div>
             <Sidebar />
-            <section className={style.home_section}>
-                <div className={style.text}>Dashboard</div>
+            <section className="home_section">
+                <div className="text">Dashboard</div>
             </section>
         </div>
     );
