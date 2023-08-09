@@ -18,6 +18,7 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  
 }
 
 .sidebar.open {
@@ -34,6 +35,7 @@
 .sidebar .logo_details .icon {
   opacity: 0;
   transition: all 0.5s ease;
+
 }
 
 .sidebar .logo_details .logo_name {
@@ -67,6 +69,7 @@
 }
 
 .sidebar i {
+  display: flex;
   color: #fff;
   height: 60px;
   min-width: 50px;
@@ -78,6 +81,7 @@
 .sidebar .nav_list {
   margin-top: 20px;
   height: 100%;
+
 }
 
 .sidebar li {
@@ -96,6 +100,7 @@
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 15px;
+  color: rgb(var(--colorbg));
   font-weight: 400;
   opacity: 0;
   white-space: nowrap;
