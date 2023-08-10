@@ -46,9 +46,9 @@ const Sidebar: React.FC = () => {
     return (
         <div className="sidebar">
             <div className="logo_details">
-                <i className="bx icons"><List size={24} weight="duotone" /></i>
+                <i className="bx icons icon"> <img src="./img/logo_min_green.png" alt="Logo_Boot" /></i>
                 <div className="logo_name">BootSolutions</div>
-                <i className="bx bx-menu icons" id="btn"><ArrowCircleLeft size={24} weight="duotone" /></i>
+                <i className="bx icons bx-menu" id="btn"><List size={24} weight="duotone" /></i>
             </div>
             <ul className="nav_list">
                 <li>
@@ -114,20 +114,22 @@ const Sidebar: React.FC = () => {
                 </li>
                 <li className="profile">
                     <div className="profile_details">
-                        <img src="./img/logo_gree.png" alt="profileImg" />
+                        <img src="./img/logo_min_green.png" alt="profileImg" />
                         <div className="name_job">
                             <div className="name">Boot Solutions</div>
                             <div className="job">Developer</div>
                         </div>
                     </div>
-                    <i className="" id="log_out"><SignOut size={24} weight="duotone" /></i>
+                    <i className="icons_logout" id="log_out"><SignOut size={24} weight="duotone" /></i>
                 </li>
             </ul>
         </div>
     );
 };
 
-const SideBar: React.FC = () => {
+
+// usando o conteuno junto com a sidebar
+const Teste: React.FC = () => {
     return (
         <div>
             <Sidebar />
@@ -138,4 +140,4 @@ const SideBar: React.FC = () => {
     );
 };
 
-export default SideBar;
+export default Sidebar;

@@ -1,12 +1,17 @@
 import react from 'react';
-import SideBar from '../../assets/components/sideBar/sideBar';
+import style from './home.module.scss';
+import Sidebar from '../../assets/components/sideBar/sideBar';
 
-class Home extends react.Component {
-    render() {
-        return (
-            <SideBar />
-        )
-    }
-}
+
+function Home() {
+    return (
+        <div>
+            <Sidebar />
+            <section className={style.home_section}>
+                <div className={style.text}>Dashboard</div>
+            </section>
+        </div>
+    );
+};
 
 export default Home;
