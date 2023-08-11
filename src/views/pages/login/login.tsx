@@ -3,6 +3,7 @@ import style from './login.module.scss';
 import { Div } from '../../assets/elements/common';
 import { GoogleLogo, FacebookLogo, TwitterLogo, Password, User, UserCircle } from '@phosphor-icons/react';
 import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
+import { Link } from 'react-router-dom';
 
 const Title = Typography.Title;
 /**
@@ -74,9 +75,11 @@ function Login() {
               </Form.Item>
 
               <Form.Item >
+                <Link to="/home">
                   <Button type="primary" htmlType="submit" block onClick={login}>
                     Login
                   </Button>
+                </Link>
                 <Divider style={{ borderColor: "black" }}>ou login com</Divider>
                 <div className={style.socialLogin}>
                   <FacebookLogo size={32} color="#3b5998" weight="duotone" onClick={login} className={style.socialLogo} />

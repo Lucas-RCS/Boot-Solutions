@@ -1,4 +1,3 @@
-import react from 'react';
 import style from './home.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 
@@ -8,7 +7,7 @@ function Home() {
         <div>
             <Sidebar />
             <section className={style.home_section}>
-                <div className={style.text}>Dashboard</div>
+                <div className={style.text}>Home</div>
             </section>
         </div>
     );

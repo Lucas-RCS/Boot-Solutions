@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './sideBar.scss';
-import { BookmarksSimple, ChartBar, ChatCircleDots, Folders, GearSix, List, MagnifyingGlass, ShoppingCart, SignOut, SquaresFour, Users } from '@phosphor-icons/react';
+import { BookmarksSimple, ChartBar, ChatCircleDots, Folders, GearSix, Infinity, List, MagnifyingGlass, ShoppingCart, SignOut, SquaresFour, Users } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar: React.FC = () => {
@@ -46,7 +47,10 @@ const Sidebar: React.FC = () => {
     return (
         <div className="sidebar">
             <div className="logo_details">
-                <i className="bx icons icon"> <img src="./img/logo_min_green.png" alt="Logo_Boot" /></i>
+                <Link to="/Home">
+                    <i className="bx icons icon"><Infinity size={32} weight="duotone" /></i>
+                </Link>
+
                 <div className="logo_name">BootSolutions</div>
                 <i className="bx icons bx-menu" id="btn"><List size={24} weight="duotone" /></i>
             </div>
@@ -57,59 +61,69 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Procurar</span>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="bx icons"><SquaresFour size={24} weight="duotone" /></i>
-                        <span className="links_name">Dashboard</span>
-                    </a>
+                    <Link to="/dashboard">
+                        <a href="#">
+                            <i className="bx icons"><SquaresFour size={24} weight="duotone" /></i>
+                            <span className="links_name">Dashboard</span>
+                        </a>
+                    </Link>
                     <span className="tooltip">Dashboard</span>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="bx icons"><Users size={24} weight="duotone" /></i>
-                        <span className="links_name">Usuário</span>
-                    </a>
+                    <Link to="/usuarios">
+                        <a href="#">
+                            <i className="bx icons"><Users size={24} weight="duotone" /></i>
+                            <span className="links_name">Usuário</span>
+                        </a>
+                    </Link>
                     <span className="tooltip">Usuário</span>
                 </li>
-                <li>
+                {/* <li>
                     <a href="#">
                         <i className="bx icons"><ChatCircleDots size={24} weight="duotone" /></i>
                         <span className="links_name">Notificações</span>
                     </a>
                     <span className="tooltip">Notificações</span>
-                </li>
+                </li> */}
                 <li>
-                    <a href="#">
-                        <i className="bx icons"><ChartBar size={24} weight="duotone" /></i>
-                        <span className="links_name">Gráficos</span>
-                    </a>
+                    <Link to="/graficos">
+                        <a href="#">
+                            <i className="bx icons"><ChartBar size={24} weight="duotone" /></i>
+                            <span className="links_name">Gráficos</span>
+                        </a>
+                    </Link>
                     <span className="tooltip">Gráficos</span>
                 </li>
                 <li>
-                    <a href="#">
-                        <i className="bx icons"><Folders size={24} weight="duotone" /></i>
-                        <span className="links_name">Arquivos</span>
-                    </a>
+                    <Link to="/arquivos">
+                        <a href="#">
+                            <i className="bx icons"><Folders size={24} weight="duotone" /></i>
+                            <span className="links_name">Arquivos</span>
+                        </a>
+                    </Link>
                     <span className="tooltip">Arquivos</span>
                 </li>
-                <li>
+                {/* <li>
                     <a href="#">
                         <i className="bx icons"><ShoppingCart size={24} weight="duotone" /></i>
                         <span className="links_name">Carrinho</span>
                     </a>
                     <span className="tooltip">Carrinho</span>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <a href="#">
                         <i className="bx icons"><BookmarksSimple size={24} weight="duotone" /></i>
                         <span className="links_name">Favoritos</span>
                     </a>
                     <span className="tooltip">Favoritos</span>
-                </li>
+                </li> */}
                 <li>
-                    <a href="#">
-                        <i className="bx icons"><GearSix size={24} weight="duotone" /></i>
-                        <span className="links_name">Configurações</span>
-                    </a>
+                    <Link to="/configuracoes">
+                        <a href="#">
+                            <i className="bx icons"><GearSix size={24} weight="duotone" /></i>
+                            <span className="links_name">Configurações</span>
+                        </a>
+                    </Link>
                     <span className="tooltip">Configurações</span>
                 </li>
                 <li className="profile">
@@ -120,7 +134,9 @@ const Sidebar: React.FC = () => {
                             <div className="job">Developer</div>
                         </div>
                     </div>
-                    <i className="icons_logout" id="log_out"><SignOut size={24} weight="duotone" /></i>
+                    <Link to="/">
+                        <i className="icons_logout" id="log_out"><SignOut size={24} weight="duotone" /></i>
+                    </Link>
                 </li>
             </ul>
         </div>
