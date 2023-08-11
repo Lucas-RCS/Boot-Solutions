@@ -15,7 +15,7 @@
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  padding: 100px 400px;
+  padding: 150px 450px;
 
   .AppStyle {
     width: 100%;
@@ -43,24 +43,38 @@
         justify-content: center;
         gap: 24px;
       }
+
       .socialLogo {
         cursor: pointer;
         transition: all 0.3s ease;
       }
+
       .socialLogo:hover {
         transform: scale(1.2);
       }
     }
   }
-  
+
   footer {
     padding: 12px;
   }
-}::selection{
-  background-color: rgba(var(--colorbg),1);
+}
+
+::selection {
+  background-color: rgba(var(--colorbg), 1);
   color: white;
 }
 
+.FormItem {
+
+  label:after {
+    content: " " !important;
+  }
+
+  label:before {
+    content: " " !important;
+  }
+}
 
 
 .Input,
@@ -69,11 +83,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius:8px;
+  border-radius: 8px;
   font-size: 15px;
   border-width: 2px;
   color: rgb(var(--colorbg));
   border-color: rgba(var(--colorbg), 0.5);
+
 }
 
 
@@ -94,6 +109,7 @@
   height: 35px;
   line-height: 1;
 }
+
 .Textarea {
   resize: none;
   padding: 10px;

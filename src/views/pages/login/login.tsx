@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './login.module.scss';
 import { Div } from '../../assets/elements/common';
-import { GoogleLogo, FacebookLogo, TwitterLogo } from '@phosphor-icons/react';
+import { GoogleLogo, FacebookLogo, TwitterLogo, Password, User, UserCircle } from '@phosphor-icons/react';
 import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
 
 const Title = Typography.Title;
@@ -50,19 +50,23 @@ function Login() {
             >
 
               <Form.Item
-                label="Login"
+                label={(
+                  <UserCircle size={24} color='#000000c3' weight="duotone" />
+                )}
                 name="Login"
                 rules={[{ required: true, message: 'Por favor insira o seu login!' }]}
+                className={style.FormItem}
               >
-                <Input className={style.Input} />
+                <Input className={style.Input} placeholder='Login' />
               </Form.Item>
 
               <Form.Item
-                label="Senha"
+                label={(<Password size={24} color='#000000c3' weight="duotone" />)}
                 name="Senha"
                 rules={[{ required: true, message: 'Por favor insira a sua senha!' }]}
+                className={style.FormItem}
               >
-                <Input.Password className={style.Input} />
+                <Input.Password className={style.Input} placeholder='Senha' />
               </Form.Item>
 
               <Form.Item name="remember" valuePropName="checked" >

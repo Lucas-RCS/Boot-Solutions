@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './sideBar.scss';
-import { ArrowCircleLeft, BookmarksSimple, ChartBar, ChatCircleDots, Folders, GearSix, List, MagnifyingGlass, ShoppingCart, SignOut, SquaresFour, Users } from '@phosphor-icons/react';
+import { BookmarksSimple, ChartBar, ChatCircleDots, Folders, GearSix, List, MagnifyingGlass, ShoppingCart, SignOut, SquaresFour, Users } from '@phosphor-icons/react';
 
 
 const Sidebar: React.FC = () => {
