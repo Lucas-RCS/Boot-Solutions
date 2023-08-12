@@ -44,6 +44,3 @@ Siga estas etapas para começar a trabalhar no projeto:
 
    ```sh
    npm start
-
-
-

@@ -11,12 +11,12 @@ import Configuracoes from '../views/pages/configuracoes/configuracoes';
 
 const HomeRout = () => (
    <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/usuarios" element={<Usuarios />} />
-      <Route path="/graficos" element={<Graficos />} />
-      <Route path="/arquivos" element={<Arquivos />} />
-      <Route path="/configuracoes" element={<Configuracoes />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Usuarios" element={<Usuarios />} />
+      <Route path="/Graficos" element={<Graficos />} />
+      <Route path="/Arquivos" element={<Arquivos />} />
+      <Route path="/Configuracoes" element={<Configuracoes />} />
       {/* <Route path="/notificações" element={<Notificações />} />
       <Route path="/carrinho" element={<Carrinho />} />
       <Route path="/favoritos" element={<Favorito />} />

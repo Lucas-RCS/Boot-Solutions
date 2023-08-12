@@ -22,13 +22,18 @@ export const ButtonBlack = styled(Button)`
    color: white;
 `;
 
-export const Div = styled.div<{ $primary?: boolean; $colorBG?: string; $width?: string; $height?: string; $padding?: string; $radius?: string; }>`
-   display: flex;   
+export const Div = styled.div<{ $primary?: boolean; $colorBG?: string; $width?: string; $height?: string; $padding?: string; $radius?: string; $border?: string ; $bxShadown?: string;}>`
    background-color: ${props => props.$primary ? props.$colorBG : "#141415"};
    width: ${props => props.$width !== "" ? props.$width : "auto"};
    height: ${props => props.$height !== "" ? props.$height : "auto"};
    padding: ${props => props.$padding !== "" ? props.$padding : "0"};
    border-radius: ${props => props.$radius !== "" ? props.$radius : "0"};
+   box-shadow: ${props => props.$bxShadown !== "" ? props.$bxShadown : "none"};
+   border: ${props => props.$border !== "" ? props.$border : "none"};
+`;
+
+export const DivFlex = styled(Div)`
+   display: flex;   
    justify-content: center;
    align-items: center;
 `;

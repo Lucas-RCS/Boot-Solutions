@@ -1,6 +1,10 @@
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
+}
 .home_section {
   position: relative;
-  background: #E4E9F7;
+  background: linear-gradient(145deg, #0c0c0c 20%, rgba(var(--colorbg), .3) 100%);
   min-height: 100dvh;
   top: 0;
   left: 78px;
@@ -10,9 +14,18 @@
   
   .text {
     display: inline-block;
-    color: #141415;
+    color: #eeeeee;
     font-size: 25px;
     font-weight: 500;
     margin: 18px
+
   }
+}
+
+.teste{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );
 }

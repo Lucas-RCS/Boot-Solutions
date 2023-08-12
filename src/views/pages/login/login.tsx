@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './login.module.scss';
-import { Div } from '../../assets/elements/common';
+import { Div, DivFlex } from '../../assets/elements/common';
 import { GoogleLogo, FacebookLogo, TwitterLogo, Password, User, UserCircle } from '@phosphor-icons/react';
 import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ function Login() {
     <div className={style.Bg}>
       <div className={style.AppStyle}>
         <div className={style.Container} onContextMenu={handleContextMenu}>
-          <Div $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
+          <DivFlex $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
             <img src="./img/logo_black.png" alt="Logo BootSolutions" draggable={false} />
             <Title level={2} style={{ color: "black" }}>Login</Title>
             <Form
@@ -75,7 +75,7 @@ function Login() {
               </Form.Item>
 
               <Form.Item >
-                <Link to="/home">
+                <Link to="/Home">
                   <Button type="primary" htmlType="submit" block onClick={login}>
                     Login
                   </Button>
@@ -88,7 +88,7 @@ function Login() {
                 </div>
               </Form.Item>
             </Form>
-          </Div>
+          </DivFlex>
         </div>
       </div >
       <footer><span>powered by @BootSolutions</span></footer>

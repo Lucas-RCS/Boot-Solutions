@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Routes from './routes';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, theme } from 'antd';
 
 const LS = require('local-storage');
 
@@ -30,6 +30,7 @@ root.render(
       theme={{
         token: {
         },
+        algorithm: theme.darkAlgorithm,
         components: {
           Button: {
             colorPrimary: "rgb(var(--colorbg))",
@@ -42,6 +43,19 @@ root.render(
           },
           Input: {
             colorBorder: "rgb(var(--colorbg))",
+            colorBgContainer: "white",
+            colorTextPlaceholder: "#ccc",
+          },
+          Table: {
+            colorBorder: "rgb(var(--colorbg))",
+            colorText: "#f8f9fc",
+            colorTextHeading: "#f8f9fc",
+            colorBgContainer: "#141415",
+          },
+          Pagination: {
+            colorPrimary: "rgb(var(--colorbg))",
+            colorPrimaryHover: "rgba(var(--colorbg),0.8)",
+            colorBgContainer: "#242524",
           },
         },
       }}

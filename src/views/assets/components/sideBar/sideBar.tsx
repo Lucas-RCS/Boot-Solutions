@@ -61,7 +61,7 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Procurar</span>
                 </li>
                 <li>
-                    <Link to="/dashboard">
+                    <Link to="/Dashboard">
                         <a href="#">
                             <i className="bx icons"><SquaresFour size={24} weight="duotone" /></i>
                             <span className="links_name">Dashboard</span>
@@ -70,7 +70,7 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Dashboard</span>
                 </li>
                 <li>
-                    <Link to="/usuarios">
+                    <Link to="/Usuarios">
                         <a href="#">
                             <i className="bx icons"><Users size={24} weight="duotone" /></i>
                             <span className="links_name">Usuário</span>
@@ -86,7 +86,7 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Notificações</span>
                 </li> */}
                 <li>
-                    <Link to="/graficos">
+                    <Link to="/Graficos">
                         <a href="#">
                             <i className="bx icons"><ChartBar size={24} weight="duotone" /></i>
                             <span className="links_name">Gráficos</span>
@@ -95,7 +95,7 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Gráficos</span>
                 </li>
                 <li>
-                    <Link to="/arquivos">
+                    <Link to="/Arquivos">
                         <a href="#">
                             <i className="bx icons"><Folders size={24} weight="duotone" /></i>
                             <span className="links_name">Arquivos</span>
@@ -118,7 +118,7 @@ const Sidebar: React.FC = () => {
                     <span className="tooltip">Favoritos</span>
                 </li> */}
                 <li>
-                    <Link to="/configuracoes">
+                    <Link to="/Configuracoes">
                         <a href="#">
                             <i className="bx icons"><GearSix size={24} weight="duotone" /></i>
                             <span className="links_name">Configurações</span>
