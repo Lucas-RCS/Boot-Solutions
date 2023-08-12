@@ -133,10 +133,10 @@ const Sidebar: React.FC = () => {
                             <div className="name">Boot Solutions</div>
                             <div className="job">Developer</div>
                         </div>
-                    </div>
                     <Link to="/">
                         <i className="icons_logout" id="log_out"><SignOut size={24} weight="duotone" /></i>
                     </Link>
+                    </div>
                 </li>
             </ul>
         </div>

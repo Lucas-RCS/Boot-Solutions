@@ -15,8 +15,13 @@ const ColorSystem = () => {
 };
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
+// teste sem o local storage
+const color = () => {
+  return "27, 154, 170";
+}
+
 const style = {
-  "--colorbg": ColorSystem()
+  "--colorbg": color() /*ColorSystem() <- Papa mudar para LocalStorage é só mudar o color() para ColorSstem()*/,
 } as React.CSSProperties;
 
 root.render(

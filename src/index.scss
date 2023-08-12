@@ -1,6 +1,5 @@
 @import url("./views/assets/styleColors.scss");
 
-
 html,
 body,
 div,
@@ -173,7 +172,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 4px;
-	background: #888;
+	background: rgb(var(--colorbg));
 }
 
 ::-webkit-scrollbar-thumb:hover {

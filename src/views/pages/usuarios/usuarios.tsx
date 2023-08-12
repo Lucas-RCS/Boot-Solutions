@@ -5,7 +5,9 @@ function Usuarios() {
     return (
         <div>
             <Sidebar />
-            <h1 className={style.text}>User</h1>
+            <div className={style.home_section}>
+                <div className={style.text}>Usuarios</div>
+            </div>
         </div>
     )
 }

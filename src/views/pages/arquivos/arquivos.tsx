@@ -1,13 +1,15 @@
 import style from './arquivos.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 
-function Graficos() {
+function Arquivos() {
     return (
         <div>
             <Sidebar />
-            <h1 className={style.text}>Arquivos</h1>
+            <div className={style.home_section}>
+                <div className={style.text}>Arquivos</div>
+            </div>
         </div>
     )
 }
 
-export default Graficos;
+export default Arquivos;

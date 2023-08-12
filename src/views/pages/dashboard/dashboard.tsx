@@ -5,7 +5,9 @@ function Dashboard() {
     return (
         <div>
             <Sidebar />
-            <h1 className={style.text}>Dashboard</h1>
+            <div className={style.home_section}>
+                <div className={style.text}>Dashboard</div>
+            </div>
         </div>
     )
 }

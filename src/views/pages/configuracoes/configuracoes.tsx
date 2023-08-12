@@ -5,7 +5,9 @@ function Configuracoes() {
     return (
         <div>
             <Sidebar />
-            <h1 className={style.text}>Configurações</h1>
+            <div className={style.home_section}>
+                <div className={style.text}>Configurações</div>
+            </div>
         </div>
     )
 }
