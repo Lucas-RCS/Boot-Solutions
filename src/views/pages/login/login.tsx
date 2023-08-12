@@ -80,7 +80,7 @@ function Login() {
                     Login
                   </Button>
                 </Link>
-                <Divider style={{ borderColor: "black" }}>ou login com</Divider>
+                <Divider style={{ borderColor: "black", color: "black" }}>ou login com</Divider>
                 <div className={style.socialLogin}>
                   <FacebookLogo size={32} color="#3b5998" weight="duotone" onClick={login} className={style.socialLogo} />
                   <GoogleLogo size={32} weight="duotone" color="#db4537" onClick={login} className={style.socialLogo} />

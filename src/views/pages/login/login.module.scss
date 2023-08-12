@@ -100,7 +100,7 @@
 
 .Input:focus,
 .Textarea:focus {
-  color: rgb(var(--colorbg));
+  color: rgb(var(--colorbg)) !important;
   border-color: rgba(var(--colorbg), 1) !important;
 }
 

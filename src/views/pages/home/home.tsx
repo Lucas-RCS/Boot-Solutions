@@ -1,8 +1,8 @@
 import style from './home.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { CameraPlus, House } from '@phosphor-icons/react';
-import { Avatar, FloatButton } from 'antd';
+import { House } from '@phosphor-icons/react';
+import { FloatButton } from 'antd';
 
 
 function Home() {
@@ -19,18 +19,34 @@ function Home() {
                     <div className={style.Main}>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='200px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)'>
-                            <Avatar className={style.Avatar}
-                                size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-                                icon={<CameraPlus size={64} weight='duotone' />}
-                            />
+
                         </Div>
+                        <div className={style.Section1}>
+                            <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='300px' $radius='12px'
+                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            </Div>
+                            <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='300px' $radius='12px'
+                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            </Div>
+                        </div>
+                        <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='300px' $radius='12px'
+                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                        </Div>
+                        <div className={style.Section1}>
+                            <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='370px' $radius='12px'
+                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            </Div>
+                            <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='370px' $radius='12px'
+                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            </Div>
+                        </div>
+                        
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='370px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
                         </Div>
                     </div>
                 </div>
             </div>
-            <FloatButton />
             <FloatButton.BackTop />
         </div >
     );

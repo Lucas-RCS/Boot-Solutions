@@ -45,17 +45,7 @@ root.render(
             colorBorder: "rgb(var(--colorbg))",
             colorBgContainer: "white",
             colorTextPlaceholder: "#ccc",
-          },
-          Table: {
-            colorBorder: "rgb(var(--colorbg))",
-            colorText: "#f8f9fc",
-            colorTextHeading: "#f8f9fc",
-            colorBgContainer: "#141415",
-          },
-          Pagination: {
-            colorPrimary: "rgb(var(--colorbg))",
-            colorPrimaryHover: "rgba(var(--colorbg),0.8)",
-            colorBgContainer: "#242524",
+            colorBgBase: "rgb(var(--colorbg))",
           },
         },
       }}
