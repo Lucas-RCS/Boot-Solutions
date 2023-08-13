@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './login.module.scss';
-import { Div, DivFlex } from '../../assets/elements/common';
+import { DivFlex } from '../../assets/elements/common';
 import { GoogleLogo, FacebookLogo, TwitterLogo, Password, User, UserCircle } from '@phosphor-icons/react';
 import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
 import { Link } from 'react-router-dom';
@@ -33,9 +33,9 @@ function Login() {
     <div className={style.Bg}>
       <div className={style.AppStyle}>
         <div className={style.Container} onContextMenu={handleContextMenu}>
-          <DivFlex $primary $colorBG='white' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
-            <img src="./img/logo_black.png" alt="Logo BootSolutions" draggable={false} />
-            <Title level={2} style={{ color: "black" }}>Login</Title>
+          <DivFlex $primary $colorBG='#141415' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
+            <img src="./img/logo_white.png" alt="Logo BootSolutions" draggable={false} />
+            <Title level={2} style={{ color: "#f8f9fc" }}>Login</Title>
             <Form
               name="basic"
               labelCol={{ span: 0 }}
@@ -52,7 +52,7 @@ function Login() {
 
               <Form.Item
                 label={(
-                  <UserCircle size={24} color='#000000c3' weight="duotone" />
+                  <UserCircle size={24} color='#f8f9fcc3' weight="duotone" />
                 )}
                 name="Login"
                 rules={[{ required: true, message: 'Por favor insira o seu login!' }]}
@@ -62,7 +62,7 @@ function Login() {
               </Form.Item>
 
               <Form.Item
-                label={(<Password size={24} color='#000000c3' weight="duotone" />)}
+                label={(<Password size={24} color='#f8f9fcc3' weight="duotone" />)}
                 name="Senha"
                 rules={[{ required: true, message: 'Por favor insira a sua senha!' }]}
                 className={style.FormItem}
@@ -71,7 +71,7 @@ function Login() {
               </Form.Item>
 
               <Form.Item name="remember" valuePropName="checked" >
-                <Checkbox>Lembre-me</Checkbox>
+                <Checkbox style={{color: "white"}}>Lembre-me</Checkbox>
               </Form.Item>
 
               <Form.Item >
@@ -80,7 +80,7 @@ function Login() {
                     Login
                   </Button>
                 </Link>
-                <Divider style={{ borderColor: "black", color: "black" }}>ou login com</Divider>
+                <Divider style={{ borderColor: "#f8f9fc", color: "#f8f9fc" }}>ou login com</Divider>
                 <div className={style.socialLogin}>
                   <FacebookLogo size={32} color="#3b5998" weight="duotone" onClick={login} className={style.socialLogo} />
                   <GoogleLogo size={32} weight="duotone" color="#db4537" onClick={login} className={style.socialLogo} />

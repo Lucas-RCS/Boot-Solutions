@@ -5,6 +5,7 @@ import { Div } from '../../assets/elements/common';
 import { House, SquaresFour } from '@phosphor-icons/react';
 import { FloatButton, Card } from 'antd';
 import { Link } from 'react-router-dom';
+import Search from 'antd/es/input/Search';
 
 
 
@@ -19,46 +20,37 @@ function Dashboard() {
             key: 'tab2',
             tab: 'Aba 2',
         },
+        {
+            key: 'tab3',
+            tab: 'Aba 3',
+        },
+        {
+            key: 'tab4',
+            tab: 'Aba 4',
+        },
     ];
 
     const contentList: Record<string, React.ReactNode> = {
         tab1: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptas consequuntur quam quasi magnam deleniti.
             Consequatur sunt odio quae, temporibus nemo cum reiciendis </p>,
-        tab2: <p>Lorem ipsum dolor sittur adipisicing elit. Consequuntur 
+        tab2: <p>Lorem ipsum dolor sittur adipisicing elit. Consequuntur
             quisquam dolorum aliquam, endus in dicta cupiditate reiciendis
-             labore ratione voluptate  voluptatem asperiores! Quibusdam?</p>,
+            labore ratione voluptate  voluptatem asperiores! Quibusdam?</p>,
+        tab3: <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Quisquam, quae suscipit atque neque sequi porro animi sed
+            accusamus esse molestias eum, dicta delectus consequatur
+            velit magnam, vitae quis. Quis, magnam?</p>,
+        tab4: <p>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sapiente nihil necessitatibus suscipit ex id nesciunt
+            . Quas non, et soluta doloribus corrupti quidem facilis ad
+            perspiciatis numqua</p>,
     };
 
-    const tabListNoTitle = [
-        {
-            key: 'article',
-            label: 'article',
-        },
-        {
-            key: 'app',
-            label: 'app',
-        },
-        {
-            key: 'project',
-            label: 'project',
-        },
-    ];
-
-    const contentListNoTitle: Record<string, React.ReactNode> = {
-        article: <p>article content</p>,
-        app: <p>app content</p>,
-        project: <p>project content</p>,
-    }
-
     const [activeTabKey1, setActiveTabKey1] = useState<string>('tab1');
-    const [activeTabKey2, setActiveTabKey2] = useState<string>('app');
 
     const onTab1Change = (key: string) => {
         setActiveTabKey1(key);
-    };
-    const onTab2Change = (key: string) => {
-        setActiveTabKey2(key);
     };
     return (
         <div>
@@ -75,24 +67,32 @@ function Dashboard() {
                         <h1>Dashboard</h1>
                     </div>
                     <div className={style.Main}>
-                        <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='200px' $radius='12px'
+                        <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='80px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)'>
-                                
+                            <div className={style.Seach}>
+                                <Search
+                                    style={{ width: '40%', }}
+                                    placeholder="Busque por um cliente"
+                                    size="large" />
+                            </div>
+
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='370px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)' $padding='40px 40px !important'>
-                            <>
-                                <Card
-                                    style={{ width: '100%', color: '#f8f9fc' }}
-                                    title="Card title"
-                                    extra={<a href="#" style={{color : "rgba(var(--colorbg),1)"}}>More</a>}
-                                    tabList={tabList}
-                                    activeTabKey={activeTabKey1}
-                                    onTabChange={onTab1Change}
-                                >
-                                    {contentList[activeTabKey1]}
-                                </Card>
-                            </>
+                            <Card
+                                style={{ width: '100%', color: '#f8f9fc' }}
+                                title="Titulo do Card"
+                                extra={<a href="#" style={{ color: "rgba(var(--colorbg),1)" }}>More</a>}
+                                tabList={tabList}
+                                activeTabKey={activeTabKey1}
+                                onTabChange={onTab1Change}
+                            >
+                                {contentList[activeTabKey1]}
+                            </Card>
+                        </Div>
+                        <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
+                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            <div className={style.threeDot}>...</div>
                         </Div>
                     </div>
                 </div>

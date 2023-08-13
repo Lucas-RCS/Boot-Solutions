@@ -29,6 +29,7 @@ root.render(
     <ConfigProvider
       theme={{
         token: {
+          colorPrimaryHover: "rgba(var(--colorbg),1)",
         },
         algorithm: theme.darkAlgorithm,
         components: {
@@ -42,10 +43,23 @@ root.render(
             colorPrimaryHover: "rgba(var(--colorbg),0.5)",
           },
           Input: {
-            colorBorder: "rgb(var(--colorbg))",
-            colorBgContainer: "white",
+            colorPrimaryHover: "rgba(var(--colorbg),1)",
             colorTextPlaceholder: "#ccc",
             colorBgBase: "rgb(var(--colorbg))",
+          },
+          DatePicker: {
+            colorPrimary: "rgba(var(--colorbg),1)",
+            colorLinkActive: "rgba(var(--colorbg),1)",
+          },
+          Slider: {
+            colorPrimary: "rgba(var(--colorbg),1)",
+            colorPrimaryActive: "rgba(var(--colorbg),0.2)",
+            trackBg: "rgba(var(--colorbg),0.2)",
+            trackHoverBg: "rgba(var(--colorbg),0.5)",
+            handleColor: "rgba(var(--colorbg),1)",
+          },
+          Table: {
+            colorPrimary: "rgba(var(--colorbg),1)",
           },
         },
       }}

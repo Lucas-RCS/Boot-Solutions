@@ -1,4 +1,7 @@
 @import url("../../assets/styleColors.scss");
+input{
+  color: rgb(var(--colorbg)) !important;
+}
 
 .Bg {
   display: flex;
@@ -105,6 +108,7 @@
 }
 
 .Input {
+  border: 2px solid rgba(var(--colorbg), 0.5) !important;
   padding: 0 10px;
   height: 35px;
   line-height: 1;
