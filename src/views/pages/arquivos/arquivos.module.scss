@@ -17,23 +17,25 @@
     width: 100%;
     height: 100%;
     transition: all 0.5s ease;
-    
-    
+
+
     .Title {
       text-decoration: none;
       display: flex;
       width: 100%;
       height: auto;
-      
+
       .IconTitle {
         margin: 0 15px 0 0;
         color: #f8f9fc;
         transition: all 0.5s ease;
       }
-      .IconTitle:hover{
+
+      .IconTitle:hover {
         color: rgba(var(--colorbg), 1);
       }
-      .IconPage{
+
+      .IconPage {
         margin: 0 10px 0 10px;
         color: #f8f9fc;
       }
@@ -46,10 +48,10 @@
 
     }
 
-    .Main{
+    .Main {
       padding: 10px 30px;
       transition: all 0.5s ease;
-      
+
       .content {
         display: flex;
         padding: 20px 20px 20px 20px;
@@ -62,23 +64,49 @@
           width: 100%;
           justify-content: center;
           align-items: center;
-          color: #f8f9fc62;
-          font-size: 36px;
         }
       }
-      .Avatar{
+
+      .Seach {
         display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
         align-items: center;
-        justify-content: center ;
-        width: 150px !important;
-        height: 150px !important;
-        cursor: pointer;
-        transition: all 0.5s ease;
       }
-      .Avatar:hover{
-        color: rgba(var(--colorbg), 1);
-        transform: scale(1.1);
+    }
+
+    .loading {
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .Section1 {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .TimeLine {
+      display: inline;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .UploadImg{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding: 10px
     }
   }
 }

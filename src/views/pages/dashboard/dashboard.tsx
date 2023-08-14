@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import style from './dashboard.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { House, SquaresFour } from '@phosphor-icons/react';
-import { FloatButton, Card } from 'antd';
+import { ArrowClockwise, House, SquaresFour } from '@phosphor-icons/react';
+import { FloatButton, Card, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import Search from 'antd/es/input/Search';
 
@@ -52,6 +52,9 @@ function Dashboard() {
     const onTab1Change = (key: string) => {
         setActiveTabKey1(key);
     };
+
+    const antIcon = <ArrowClockwise size={32} weight='duotone' color='#f8f9fc75' className={style.loading} />;
+
     return (
         <div>
             <Sidebar />
@@ -72,7 +75,7 @@ function Dashboard() {
                             <div className={style.Seach}>
                                 <Search
                                     style={{ width: '40%', }}
-                                    placeholder="Busque por um cliente"
+                                    placeholder="Busque por um Usuário"
                                     size="large" />
                             </div>
 
@@ -92,7 +95,7 @@ function Dashboard() {
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}>...</div>
+                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
                         </Div>
                     </div>
                 </div>

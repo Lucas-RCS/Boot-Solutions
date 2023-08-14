@@ -63,8 +63,6 @@
           width: 100%;
           justify-content: center;
           align-items: center;
-          color: #f8f9fc62;
-          font-size: 36px;
         }
       }
 
@@ -123,6 +121,20 @@
       height: 100%;
       justify-content: center;
       align-items: center;
+    }
+
+    .loading {
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }

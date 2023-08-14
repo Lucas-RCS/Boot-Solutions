@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import style from './home.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { House } from '@phosphor-icons/react';
+import { ArrowClockwise, House } from '@phosphor-icons/react';
 import {
     Col, ColorPicker, DatePicker, Divider,
     FloatButton, Rate, Row, Slider, Space,
-    Button, notification, Calendar, Carousel
+    Button, notification, Calendar, Carousel, Spin
 } from 'antd';
 import type { CalendarMode } from 'antd/es/calendar/generateCalendar';
 import type { Dayjs } from 'dayjs';
@@ -28,6 +28,7 @@ function Home() {
             'A notificação foi encerrada. O botão Fechar foi clicado ou o tempo de duração terminou.',
         );
     };
+
     const [api, contextHolder] = notification.useNotification();
     const openNotification = () => {
         const key = `open${Date.now()}`;
@@ -55,6 +56,8 @@ function Home() {
         console.log(value.format('YYYY-MM-DD'), mode);
     };
 
+    const antIcon = <ArrowClockwise size={32} weight='duotone' color='#f8f9fc75' className={style.loading} />;
+
     return (
         <div>
             <Sidebar />
@@ -71,7 +74,7 @@ function Home() {
                             <div className={style.Seach}>
                                 <Search
                                     style={{ width: '40%', }}
-                                    placeholder="Busque por um cliente"
+                                    placeholder="Busque por um Usuário"
                                     size="large" />
                             </div>
                         </Div>
@@ -203,22 +206,26 @@ function Home() {
                         </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}>...</div>
+                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+
                         </Div>
                         <div className={style.Section1}>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
                                 $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                                <div className={style.threeDot}>...</div>
+                                <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+
                             </Div>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
                                 $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                                <div className={style.threeDot}>...</div>
+                                <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+
                             </Div>
                         </div>
 
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}>...</div>
+                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+
                         </Div>
                     </div>
                 </div>

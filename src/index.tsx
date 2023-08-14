@@ -61,6 +61,12 @@ root.render(
           Table: {
             colorPrimary: "rgba(var(--colorbg),1)",
           },
+          Modal: {
+            headerBg: "rgba(var(--colorbg),1)",
+          },
+          Timeline: {
+            colorPrimary: "rgba(var(--colorbg),1)",
+          }
         },
       }}
     >
