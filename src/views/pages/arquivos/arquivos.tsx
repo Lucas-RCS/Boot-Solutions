@@ -78,15 +78,15 @@ function Arquivos() {
             <Sidebar />
             <div className={style.Container}>
                 <div className={style.ContentContainer}>
-                    <div className={style.Title}>
-                        <Link to="/Home">
-                            <House className={style.IconTitle} size={32} weight='duotone' />
-                        </Link>
-                        <h1>Home /</h1>
-                        <Folders className={style.IconPage} size={32} weight='duotone' />
-                        <h1>Arquivos</h1>
-                    </div>
                     <div className={style.Main}>
+                        <div className={style.Title}>
+                            <Link to="/Home">
+                                <House className={style.IconTitle} size={32} weight='duotone' />
+                            </Link>
+                            <h1>Home /</h1>
+                            <Folders className={style.IconPage} size={32} weight='duotone' />
+                            <h1>Arquivos</h1>
+                        </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='80px' $radius='12px'
                             $border='1px solid rgba(var(--colorbg), .5)'>
                             <div className={style.Seach}>
