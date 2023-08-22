@@ -1,4 +1,4 @@
-import { Form, Input } from 'antd';
+import { Form, Input, InputNumber } from 'antd';
 import style from './FormFunc.module.scss';
 import TextArea from 'antd/es/input/TextArea';
 
@@ -22,32 +22,33 @@ function FormFunc() {
                             label="Cod. Produto"
                             name="idProd"
                             rules={[{ required: true, message: 'Por favor, insira o Código do Produto' }]}
-                            className={style.Input}
                         >
                             <Input />
                         </Form.Item>
-
                         <Form.Item
                             label="Produto"
                             name="nomeProd"
                             rules={[{ required: true, message: 'Por favor, insira o nome do Produto' }]}
-                            className={style.Input}
                         >
                             <Input />
+                        </Form.Item>
+                        <Form.Item
+                            label="Quantidade"
+                            name="qtdProd"
+                        >
+                            <InputNumber className={style.Input} style={{ width: "100%" }} min={1} />
                         </Form.Item>
                     </div>
                     <div className={style.descProd}>
                         <Form.Item
                             label="Descrição"
                             name="descricao"
-                            className={style.Input}
                         >
-                            <TextArea />
+                            <TextArea rows={3} placeholder="" maxLength={100} />
                         </Form.Item>
                     </div>
                 </div>
                 <div className={style.UploadImg}>
-                    <p>aaa</p>
                 </div>
             </Form>
         </div>

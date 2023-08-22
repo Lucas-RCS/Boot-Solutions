@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     padding: 0 10px 0 10px;
-    background-color: yellow;
 
     .Form {
         display: flex;
@@ -11,7 +10,7 @@
         justify-content: space-between;
 
         .InfoProd {
-            width: 79%;
+            width: 84%;
 
             .IdProd {
                 display: flex;
@@ -22,10 +21,12 @@
 
         .UploadImg {
             display: flex;
-            max-width: 20%;
-            width: 50%;
-            height: 10%;
-            background-color: red;
+            max-width: 15%;
+            width: 15%;
+            height: 130px;
+            border-radius: 8px;
+            border: 1px solid rgba(var(--colorbg),1);
         }
+        
     }
 }
