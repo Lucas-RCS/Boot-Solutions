@@ -35,7 +35,6 @@ function Login() {
         <div className={style.Container} onContextMenu={handleContextMenu}>
           <DivFlex $primary $colorBG='#141415' $width='100%' $height='100%' $radius='24px' className={style.DivForm}>
             <img src="./img/logo_white.png" alt="Logo BootSolutions" draggable={false} />
-            <Title level={2} style={{ color: "#f8f9fc" }}>Login</Title>
             <Form
               name="basic"
               labelCol={{ span: 0 }}
@@ -49,7 +48,6 @@ function Login() {
               onFinishFailed={onFinishFailed}
               autoComplete="off"
             >
-
               <Form.Item
                 label={(
                   <UserCircle size={24} color='#f8f9fcc3' weight="duotone" />

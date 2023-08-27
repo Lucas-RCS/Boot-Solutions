@@ -7,18 +7,13 @@ input{
   display: flex;
   width: 100dvw;
   height: 100dvh;
-  // background-image: url("../../../../public/img/Login_Boot.gif");
-  // background-color: rgba(var(--colorbg), 0.5);
   background: linear-gradient(45deg, rgba(var(--colorbg), 0.8), rgba(var(--colorbg), 0.1));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  padding: 150px 450px;
+  padding: 130px 450px;
 
   .AppStyle {
     width: 100%;
@@ -31,11 +26,11 @@ input{
 
     .DivForm {
       opacity: 0.9;
-      backdrop-filter: blur(10px);
       flex-direction: column;
 
       img {
-        margin-top: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
         width: auto;
         height: 20%;
       }
@@ -122,7 +117,7 @@ input{
 
 @media (max-width: 768px) {
   .Bg {
-    padding: 60px 20px;
+    padding: 60px 100px;
   }
 
   .AppStyle {
@@ -136,7 +131,7 @@ input{
 
 @media (max-width: 1268px) {
   .Bg {
-    padding: 70px 20px;
+    padding: 70px 100px;
   }
 
   .AppStyle {

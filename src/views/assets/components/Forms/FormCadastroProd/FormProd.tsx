@@ -1,5 +1,5 @@
 import { Form, Input, InputNumber } from 'antd';
-import style from './FormFunc.module.scss';
+import style from './FormProd.module.scss';
 import TextArea from 'antd/es/input/TextArea';
 
 

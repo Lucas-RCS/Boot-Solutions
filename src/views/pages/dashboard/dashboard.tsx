@@ -6,7 +6,7 @@ import { ArrowClockwise, House, SquaresFour } from '@phosphor-icons/react';
 import { FloatButton, Card, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import Search from 'antd/es/input/Search';
-import FormFunc from '../../assets/components/Forms/FormCadastroFuncionario/FormFunc';
+import FormProd from '../../assets/components/Forms/FormCadastroProd/FormProd';
 
 
 
@@ -32,7 +32,7 @@ function Dashboard() {
     ];
 
     const contentList: Record<string, React.ReactNode> = {
-        tab1: <FormFunc />,
+        tab1: <FormProd />,
         tab2: <p>Lorem ipsum dolor sittur adipisicing elit. Consequuntur
             quisquam dolorum aliquam, endus in dicta cupiditate reiciendis
             labore ratione voluptate  voluptatem asperiores! Quibusdam?</p>,
