@@ -1,11 +1,10 @@
 import React from 'react';
 import style from './login.module.scss';
 import { DivFlex } from '../../assets/elements/common';
-import { GoogleLogo, FacebookLogo, TwitterLogo, Password, User, UserCircle } from '@phosphor-icons/react';
-import { Button, Checkbox, Divider, Form, Input, Typography, message } from 'antd';
+import { GoogleLogo, FacebookLogo, TwitterLogo, Password, UserCircle } from '@phosphor-icons/react';
+import { Button, Checkbox, Divider, Form, Input, message } from 'antd';
 import { Link } from 'react-router-dom';
 
-const Title = Typography.Title;
 /**
  * @function Login 
  * @description Page Login.tsx

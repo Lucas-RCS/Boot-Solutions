@@ -8,11 +8,14 @@ import reportWebVitals from './reportWebVitals';
 import Routes from './routes';
 import { ConfigProvider, theme } from 'antd';
 
-const LS = require('local-storage');
+// cor buscada do local storage
+// const LS = require('local-storage');
 
-const ColorSystem = () => {
-  return LS.get("colorSistem");
-};
+// const ColorSystem = () => {
+//   return LS.get("colorSistem");
+// };
+
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 // teste sem o local storage
@@ -21,7 +24,7 @@ const color = () => {
 }
 
 const style = {
-  "--colorbg": color() /*ColorSystem() <- Papa mudar para LocalStorage é só mudar o color() para ColorSstem()*/,
+  "--primary_color": color() /*ColorSystem() <- Para mudar para LocalStorage é só mudar o color() para ColorSstem()*/,
 } as React.CSSProperties;
 
 root.render(
@@ -29,43 +32,43 @@ root.render(
     <ConfigProvider
       theme={{
         token: {
-          colorPrimaryHover: "rgba(var(--colorbg),1)",
+          colorPrimaryHover: "rgba(var(--primary_color),1)",
         },
         algorithm: theme.darkAlgorithm,
         components: {
           Button: {
-            colorPrimary: "rgb(var(--colorbg))",
-            colorPrimaryHover: "rgba(var(--colorbg),0.5)",
-            colorPrimaryActive: "rgba(var(--colorbg),0.2)",
+            colorPrimary: "rgb(var(--primary_color))",
+            colorPrimaryHover: "rgba(var(--primary_color),0.5)",
+            colorPrimaryActive: "rgba(var(--primary_color),0.2)",
           },
           Checkbox: {
-            colorPrimary: "rgb(var(--colorbg))",
-            colorPrimaryHover: "rgba(var(--colorbg),0.5)",
+            colorPrimary: "rgb(var(--primary_color))",
+            colorPrimaryHover: "rgba(var(--primary_color),0.5)",
           },
           Input: {
-            colorPrimaryHover: "rgba(var(--colorbg),1)",
+            colorPrimaryHover: "rgba(var(--primary_color),1)",
             colorTextPlaceholder: "#ccc",
-            colorBgBase: "rgb(var(--colorbg))",
+            colorBgBase: "rgb(var(--primary_color))",
           },
           DatePicker: {
-            colorPrimary: "rgba(var(--colorbg),1)",
-            colorLinkActive: "rgba(var(--colorbg),1)",
+            colorPrimary: "rgba(var(--primary_color),1)",
+            colorLinkActive: "rgba(var(--primary_color),1)",
           },
           Slider: {
-            colorPrimary: "rgba(var(--colorbg),1)",
-            colorPrimaryActive: "rgba(var(--colorbg),0.2)",
-            trackBg: "rgba(var(--colorbg),0.2)",
-            trackHoverBg: "rgba(var(--colorbg),0.5)",
-            handleColor: "rgba(var(--colorbg),1)",
+            colorPrimary: "rgba(var(--primary_color),1)",
+            colorPrimaryActive: "rgba(var(--primary_color),0.2)",
+            trackBg: "rgba(var(--primary_color),0.2)",
+            trackHoverBg: "rgba(var(--primary_color),0.5)",
+            handleColor: "rgba(var(--primary_color),1)",
           },
           Table: {
-            colorPrimary: "rgba(var(--colorbg),1)",
+            colorPrimary: "rgba(var(--primary_color),1)",
           },
           Modal: {
-            headerBg: "rgba(var(--colorbg),1)",
+            headerBg: "rgba(var(--primary_color),1)",
           },
           Timeline: {
-            colorPrimary: "rgba(var(--colorbg),1)",
+            colorPrimary: "rgba(var(--primary_color),1)",
           }
         },
       }}

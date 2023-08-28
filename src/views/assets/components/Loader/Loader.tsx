@@ -5,7 +5,13 @@ import style from "./Loader.module.scss";
 function Loader() {
     return (
         <>
-            <span className={style.loader}></span>
+            <div className={style.loading_wave}>
+                <div className={style.loading_bar}></div>
+                <div className={style.loading_bar}></div>
+                <div className={style.loading_bar}></div>
+                <div className={style.loading_bar}></div>
+            </div>
+
         </>
     );
 }

@@ -1,11 +1,12 @@
 import style from './usuarios.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { ArrowClockwise, House, Users } from '@phosphor-icons/react';
-import { FloatButton, Space, Spin, Table, Tag } from 'antd';
+import { House, Users } from '@phosphor-icons/react';
+import { FloatButton, Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { Link } from 'react-router-dom';
 import Search from 'antd/es/input/Search';
+import Loader from '../../assets/components/Loader/Loader';
 
 function Usuarios() {
 
@@ -104,8 +105,6 @@ function Usuarios() {
         },
     ];
 
-    const antIcon = <ArrowClockwise size={32} weight='duotone' color='#f8f9fc75' className={style.loading} />;
-
     return (
         <div>
             <Sidebar />
@@ -122,7 +121,7 @@ function Usuarios() {
                             <h1>Usuários</h1>
                         </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='80px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)'>
+                            $border='1px solid rgba(var(--primary_color), .5)'>
                             <div className={style.Seach}>
                                 <Search
                                     style={{ width: '40%', }}
@@ -131,7 +130,7 @@ function Usuarios() {
                             </div>
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='370px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
                             <div className={style.TableUsers}>
                                 <Table
                                     style={{ width: '100%' }}
@@ -142,9 +141,8 @@ function Usuarios() {
                             </div>
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
-
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                            <div className={style.Loader}><Loader /></div>
                         </Div>
                     </div>
                 </div>

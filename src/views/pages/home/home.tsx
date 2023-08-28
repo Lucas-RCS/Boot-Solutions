@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import style from './home.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { ArrowClockwise, House } from '@phosphor-icons/react';
+import { House } from '@phosphor-icons/react';
 import {
     Col, ColorPicker, DatePicker, Divider,
     FloatButton, Rate, Row, Slider, Space,
-    Button, notification, Calendar, Carousel, Spin
+    Button, notification, Calendar
 } from 'antd';
 import type { CalendarMode } from 'antd/es/calendar/generateCalendar';
 import type { Dayjs } from 'dayjs';
 import Search from 'antd/es/input/Search';
+import Loader from '../../assets/components/Loader/Loader';
 
 
 const { RangePicker } = DatePicker;
@@ -56,8 +57,6 @@ function Home() {
         console.log(value.format('YYYY-MM-DD'), mode);
     };
 
-    const antIcon = <ArrowClockwise size={32} weight='duotone' color='#f8f9fc75' className={style.loading} />;
-
     return (
         <div>
             <Sidebar />
@@ -70,7 +69,7 @@ function Home() {
                             <h1>Home</h1>
                         </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='80px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)'>
+                            $border='1px solid rgba(var(--primary_color), .5)'>
                             <div className={style.Seach}>
                                 <Search
                                     style={{ width: '40%', }}
@@ -80,7 +79,7 @@ function Home() {
                         </Div>
                         <div className={style.Section1}>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
-                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                                $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
                                 <div className={style.FormDate}>
                                     <RangePicker
                                         style={{ width: "100%", marginBottom: "10%" }}
@@ -198,33 +197,36 @@ function Home() {
                                 </div>
                             </Div>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
-                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
+                                $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
                                 <div className={style.Calendar}>
                                     <Calendar fullscreen={false} onPanelChange={onPanelChange} />
                                 </div>
                             </Div>
                         </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                            <div className={style.Loader}><Loader /></div>
+
 
                         </Div>
                         <div className={style.Section1}>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
-                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                                <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+                                $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                                <div className={style.Loader}><Loader /></div>
+
 
                             </Div>
                             <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='48%' $height='350px' $radius='12px'
-                                $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                                <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+                                $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                                <div className={style.Loader}><Loader /></div>
+
 
                             </Div>
                         </div>
 
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                            <div className={style.Loader}><Loader /></div>
 
                         </Div>
                     </div>

@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import style from './dashboard.module.scss';
 import Sidebar from '../../assets/components/sideBar/sideBar';
 import { Div } from '../../assets/elements/common';
-import { ArrowClockwise, House, SquaresFour } from '@phosphor-icons/react';
-import { FloatButton, Card, Spin } from 'antd';
+import { House, SquaresFour } from '@phosphor-icons/react';
+import { FloatButton, Card } from 'antd';
 import { Link } from 'react-router-dom';
 import Search from 'antd/es/input/Search';
 import FormProd from '../../assets/components/Forms/FormCadastroProd/FormProd';
+import Loader from '../../assets/components/Loader/Loader';
 
 
 
@@ -52,8 +53,6 @@ function Dashboard() {
         setActiveTabKey1(key);
     };
 
-    const antIcon = <ArrowClockwise size={32} weight='duotone' color='#f8f9fc75' className={style.loading} />;
-
     return (
         <div>
             <Sidebar />
@@ -69,7 +68,7 @@ function Dashboard() {
                             <h1>Dashboard</h1>
                         </div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='80px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)'>
+                            $border='1px solid rgba(var(--primary_color), .5)'>
                             <div className={style.Seach}>
                                 <Search
                                     style={{ width: '40%', }}
@@ -79,7 +78,7 @@ function Dashboard() {
 
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='500px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='40px 40px !important'>
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='40px 40px !important'>
                             <Card
                                 style={{ width: '100%', color: '#f8f9fc' }}
                                 title="Cadastro"
@@ -91,8 +90,8 @@ function Dashboard() {
                             </Card>
                         </Div>
                         <Div className={style.content} $primary $colorBG='#f8f9fc1d' $width='100%' $height='350px' $radius='12px'
-                            $border='1px solid rgba(var(--colorbg), .5)' $padding='20px 20px'>
-                            <div className={style.threeDot}><Spin indicator={antIcon} size='large' /></div>
+                            $border='1px solid rgba(var(--primary_color), .5)' $padding='20px 20px'>
+                            <div className={style.Loader}><Loader /></div>
                         </Div>
                     </div>
                 </div>

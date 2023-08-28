@@ -1,13 +1,14 @@
 @import url("../../assets/styleColors.scss");
-input{
-  color: rgb(var(--colorbg)) !important;
+
+input {
+  color: rgb(var(--primary_color)) !important;
 }
 
 .Bg {
   display: flex;
   width: 100dvw;
   height: 100dvh;
-  background: linear-gradient(45deg, rgba(var(--colorbg), 0.8), rgba(var(--colorbg), 0.1));
+  background: linear-gradient(45deg, rgba(var(--primary_color), 0.8), rgba(var(--primary_color), 0.1));
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -59,7 +60,7 @@ input{
 }
 
 ::selection {
-  background-color: rgba(var(--colorbg), 1);
+  background-color: rgba(var(--primary_color), 1);
   color: white;
 }
 
@@ -84,26 +85,26 @@ input{
   border-radius: 8px;
   font-size: 15px;
   border-width: 2px;
-  color: rgb(var(--colorbg));
-  border-color: rgba(var(--colorbg), 0.5);
+  color: rgb(var(--primary_color));
+  border-color: rgba(var(--primary_color), 0.5);
 
 }
 
 
 .Input:hover,
 .Textarea:hover {
-  box-shadow: 0 0 0 2px rgb(var(--colorbg), .5);
-  border-color: rgba(var(--colorbg), 1) !important;
+  box-shadow: 0 0 0 2px rgb(var(--primary_color), .5);
+  border-color: rgba(var(--primary_color), 1) !important;
 }
 
 .Input:focus,
 .Textarea:focus {
-  color: rgb(var(--colorbg)) !important;
-  border-color: rgba(var(--colorbg), 1) !important;
+  color: rgb(var(--primary_color)) !important;
+  border-color: rgba(var(--primary_color), 1) !important;
 }
 
 .Input {
-  border: 2px solid rgba(var(--colorbg), 0.5) !important;
+  border: 2px solid rgba(var(--primary_color), 0.5) !important;
   padding: 0 10px;
   height: 35px;
   line-height: 1;
